@@ -24,9 +24,9 @@ def generate_id(separator="-", seed: Hashable = None, word_count=4) -> str:
     if seed:
         random_obj = random.Random(seed)
 
-    parts = {dictionary.verbs: 1, dictionary.adjectives: 1, dictionary.nouns: 1}
+    parts = {dictionary.adjectives: 1, dictionary.nouns: 1}
 
-    for _ in range(3, word_count):
+    for _ in range(2, word_count):
         parts[random_obj.choice(list(parts.keys()))] += 1
 
     parts = itertools.chain.from_iterable(
