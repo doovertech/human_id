@@ -14,11 +14,11 @@ def generate_id(separator="-", seed: Hashable = None, word_count=4) -> str:
 
     :param separator: The string to use to separate words
     :param seed: The seed to use. The same seed will produce the same ID
-    :param word_count: The number of words to use. Minimum of 3.
+    :param word_count: The number of words to use. Minimum of 2.
     :return: A human readable ID
     """
-    if word_count < 3:
-        raise ValueError("word_count cannot be lower than 3")
+    if word_count < 2:
+        raise ValueError("word_count cannot be lower than 2")
 
     random_obj = system_random
     if seed:
