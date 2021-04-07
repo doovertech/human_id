@@ -24,7 +24,7 @@ def test_separator():
 
 
 def test_word_count_throws():
-    with pytest.raises(ValueError, match="word_count cannot be lower than 3"):
+    with pytest.raises(ValueError, match="word_count cannot be lower than 2"):
         generate_id(word_count=1)
 
 
