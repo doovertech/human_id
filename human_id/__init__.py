@@ -22,7 +22,7 @@ def generate_id(separator="-", seed: Hashable = None, word_count=4) -> str:
 
     random_obj = system_random
     if seed:
-        random_obj = random.Random(seed)
+        random_obj = random.Random(str(seed))
 
     parts = {dictionary.adjectives: 1, dictionary.nouns: 1, dictionary.verbs: 0 }
 
